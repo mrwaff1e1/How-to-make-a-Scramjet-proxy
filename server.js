@@ -73,3 +73,25 @@ function shutdown() {
 server.listen({
     port,
 });
+
+
+
+
+
+
+
+
+
+
+
+<script src="/uv/uv.bundle.js"></script>
+<script src="/uv/uv.config.js"></script>
+<script src="/baremux/index.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/uv/sw.js");
+    });
+}
+</script>
